@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="testview.bawei.com.baolidome.MainActivity">
+    <FrameLayout
+        android:id="@+id/fl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_center_player_height"
+        android:background="@color/top_text_color_black">
+<!--播放器-->
+    <com.easefun.polyvsdk.video.PolyvVideoView
+        android:id="@+id/polyv_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <!--缩略图-->
+        <testview.bawei.com.baolidome.PolyvPlayerPreviewView
+            android:id="@+id/polyv_player_first_start_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+            <!--显示状态栏-->
+        <testview.bawei.com.baolidome.PolyvPlayerMediaController
+            android:id="@+id/polyv_player_media_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!-- 视频在加载过程中显示的进度条 -->
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
